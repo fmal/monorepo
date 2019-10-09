@@ -59,18 +59,21 @@
   "devDependencies": {
     "@babel/cli": "7.6.2",
     "@babel/core": "7.6.2",
-    "@babel/node": "7.6.3",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/plugin-transform-runtime": "7.6.2",
     "@babel/preset-env": "7.6.2",
     "@babel/preset-typescript": "7.6.0",
+    "@babel/runtime": "7.6.3",
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
     "@commitlint/prompt-cli": "8.2.0",
     "@types/jest": "24.0.18",
     "@typescript-eslint/eslint-plugin": "2.3.3",
     "@typescript-eslint/parser": "2.3.3",
+    "babel-cli": "6.26.0",
     "babel-eslint": "10.0.3",
+    "babel-plugin-add-module-exports": "1.0.2",
+    "cerebral": "5.1.1",
     "cpy-cli": "2.0.0",
     "cross-env": "6.0.3",
     "eslint": "6.5.1",
@@ -85,6 +88,7 @@
     "prettier": "1.18.2",
     "repo-cooker": "6.3.0",
     "rimraf": "2.6.3",
-    "typescript": "3.6.3"
+    "typescript": "3.6.3",
+    "xhr-mock": "2.5.0"
   }
 }

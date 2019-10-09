@@ -16,5 +16,6 @@
       "@fmal/*": ["packages/@fmal/*/src"]
     }
   },
-  "include": ["packages/**/src", "packages/**/@types", "@types"]
+  "include": ["packages/**/src", "packages/**/@types", "@types"],
+  "exclude": ["node_modules", "packages/@fmal/http-service"]
 }

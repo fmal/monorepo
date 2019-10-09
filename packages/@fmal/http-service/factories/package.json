@@ -1,0 +1,7 @@
+{
+  "name": "@fmal/http-service/factories",
+  "private": true,
+  "main": "../dist/cjs/factories/index.js",
+  "module": "../dist/esm/factories/index.js",
+  "types": "../dist/ts/factories/index.d.ts"
+}

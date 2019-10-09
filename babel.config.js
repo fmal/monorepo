@@ -27,7 +27,8 @@ module.exports = api => {
         regenerator: false,
         useESModules: babelEnv === 'es'
       }
-    ]
+    ],
+    babelEnv === 'cjs' && 'babel-plugin-add-module-exports'
   ].filter(Boolean);
 
   return {
