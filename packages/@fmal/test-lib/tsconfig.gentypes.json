@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "../../node_modules/@fmal/test-lib/dist/ts"
+  },
+  "exclude": ["**/__tests__/**"]
+}

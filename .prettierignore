@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+__fixtures__
+__mocks__
+CHANGELOG.md
+package-lock.json

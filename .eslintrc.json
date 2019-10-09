@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["fmal", "fmal/babel", "fmal/import", "fmal/typescript"]
+}

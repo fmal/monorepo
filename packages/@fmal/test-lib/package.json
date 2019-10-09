@@ -1,0 +1,46 @@
+{
+  "name": "@fmal/test-lib",
+  "version": "0.0.0",
+  "description": "Test lib",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmal/monorepo.git",
+    "directory": "packages/@fmal/test-lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "dist/ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "typecheck": "tsc",
+    "lint": "eslint . --cache --fix --ext \".js,.ts\" --ignore-path ../../../.prettierignore",
+    "clean": "rimraf dist coverage ../../node_modules/@fmal/test-lib",
+    "_babel": "babel src -x \".js,.ts\" --root-mode upward",
+    "prebuild": "npm run clean",
+    "postbuild": "cpy package.json ../../node_modules/@fmal/test-lib",
+    "build:types": "tsc -p tsconfig.gentypes.json",
+    "build:cjs": "cross-env BABEL_ENV=cjs npm run _babel -- -d ../../node_modules/@fmal/test-lib/dist/cjs",
+    "build:es": "cross-env BABEL_ENV=es npm run _babel -- -d ../../node_modules/@fmal/test-lib/dist/es",
+    "build": "cross-env NODE_ENV=production run-p build:*",
+    "prepublishOnly": "rimraf dist && cpy ../../node_modules/@fmal/test-lib/dist/**/* dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.6.2",
+    "cpy-cli": "2.0.0",
+    "cross-env": "6.0.3",
+    "eslint": "6.5.1",
+    "jest": "24.9.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "2.6.3",
+    "typescript": "3.6.3"
+  }
+}

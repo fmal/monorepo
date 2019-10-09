@@ -1,0 +1,10 @@
+# auto-generated stuff
+coverage
+dist
+node_modules
+.eslintcache
+packages/**/package-lock.json
+
+# cruft
+.DS_Store
+npm-debug.log

@@ -1,0 +1,88 @@
+{
+  "name": "@fmal/monorepo",
+  "description": "Monorepo for holding my NPM libraries",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmal/monorepo.git"
+  },
+  "scripts": {
+    "link": "repo-cooker --link",
+    "postinstall": "npm run link",
+    "build": "repo-cooker --build",
+    "clean": "repo-cooker clean",
+    "deps:check": "repo-cooker --check-dependencies",
+    "deps:fix": "repo-cooker --fix-dependencies",
+    "lint": "eslint . --cache --fix --ext \".js,.ts\" --ignore-path .prettierignore",
+    "commit": "commit",
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:ci": "cross-env CI=true npm test",
+    "typecheck": "tsc",
+    "prerelease": "npm run build",
+    "release": "repo-cooker --release",
+    "release:preview": "repo-cooker --dry-run --release --print-release"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix --ext \".js,.ts\" --ignore-path .prettierignore",
+      "git add"
+    ],
+    "*.{json,md,yml,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        100
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "7.6.2",
+    "@babel/core": "7.6.2",
+    "@babel/node": "7.6.3",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/plugin-transform-runtime": "7.6.2",
+    "@babel/preset-env": "7.6.2",
+    "@babel/preset-typescript": "7.6.0",
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "@commitlint/prompt-cli": "8.2.0",
+    "@types/jest": "24.0.18",
+    "@typescript-eslint/eslint-plugin": "2.3.3",
+    "@typescript-eslint/parser": "2.3.3",
+    "babel-eslint": "10.0.3",
+    "cpy-cli": "2.0.0",
+    "cross-env": "6.0.3",
+    "eslint": "6.5.1",
+    "eslint-config-fmal": "6.0.0",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-jest": "22.17.0",
+    "husky": "3.0.8",
+    "jest": "24.9.0",
+    "lint-staged": "9.4.2",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.18.2",
+    "repo-cooker": "6.3.0",
+    "rimraf": "2.6.3",
+    "typescript": "3.6.3"
+  }
+}
