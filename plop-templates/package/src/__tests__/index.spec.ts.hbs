@@ -1,0 +1,8 @@
+import hello from '..'
+
+describe('hello', () => {
+  it('should return string', () => {
+    const result = hello('world');
+    expect(typeof result).toBe('string');
+  });
+});

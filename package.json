@@ -18,14 +18,15 @@
     "deps:check": "repo-cooker --check-dependencies",
     "deps:fix": "repo-cooker --fix-dependencies",
     "lint": "eslint . --cache --fix --ext \".js,.ts\" --ignore-path .prettierignore",
-    "commit": "commit",
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
     "test:ci": "cross-env CI=true npm test",
     "typecheck": "tsc",
     "prerelease": "npm run build",
     "release": "repo-cooker --release",
-    "release:preview": "repo-cooker --dry-run --release --print-release"
+    "release:preview": "repo-cooker --dry-run --release --print-release",
+    "commit": "commit",
+    "plop": "plop"
   },
   "husky": {
     "hooks": {
@@ -80,6 +81,7 @@
     "jest": "24.9.0",
     "lint-staged": "9.4.2",
     "npm-run-all": "4.1.5",
+    "plop": "2.4.0",
     "prettier": "1.18.2",
     "repo-cooker": "6.3.0",
     "rimraf": "2.6.3",
