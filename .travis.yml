@@ -21,7 +21,7 @@ script:
   - |
     if [[ $SKIP_TESTS != 'true' ]]; then
       npm prune
-      npm run checkdeps
+      npm run deps:check
       npm run typecheck
       npm run lint
       npm test
