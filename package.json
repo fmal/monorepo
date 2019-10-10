@@ -2,7 +2,7 @@
   "name": "@fmal/monorepo",
   "description": "Monorepo for holding my NPM libraries",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.0-ignore",
   "engines": {
     "node": ">=8.5"
   },
