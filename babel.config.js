@@ -17,7 +17,7 @@ module.exports = api => {
     targets: envTargets
   };
 
-  const presets = [['@babel/preset-env', envOpts], '@babel/typescript'];
+  const presets = [['@babel/preset-env', envOpts], '@babel/preset-typescript'];
 
   const plugins = [
     ['@babel/plugin-proposal-class-properties', { loose: true }],
