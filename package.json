@@ -22,9 +22,9 @@
     "test:coverage": "npm test -- --coverage",
     "test:ci": "cross-env CI=true npm test",
     "typecheck": "tsc",
-    "prerelease": "npm run build",
     "release": "repo-cooker --release",
-    "release:preview": "repo-cooker --dry-run --release --print-release",
+    "release:preview": "npm run release -- --dry-run --print-release",
+    "release:debug": "npm run release -- --dry-run --devtools",
     "commit": "commit",
     "plop": "plop"
   },

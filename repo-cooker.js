@@ -5,7 +5,7 @@ process.env.REPO_COOKER_GITHUB_TOKEN = process.env.GH_TOKEN;
 
 export const cooker = Cooker(process.argv, {
   devtools: {
-    host: 'localhost:8787, reconnect: false'
+    host: 'localhost:8787'
   },
   path: '.',
   packagesGlobs: ['packages/@fmal/*']
