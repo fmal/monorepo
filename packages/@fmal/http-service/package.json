@@ -44,7 +44,7 @@
     "build:cjs": "cross-env BABEL_ENV=cjs npm run _babel -- -d ../../node_modules/@fmal/http-service/dist/cjs",
     "build:es": "cross-env BABEL_ENV=es npm run _babel -- -d ../../node_modules/@fmal/http-service/dist/es",
     "build": "cross-env NODE_ENV=production run-p build:*",
-    "prepublishOnly": "rimraf dist && cpy ../../node_modules/@fmal/http-service/dist/**/* dist"
+    "prepublishOnly": "rimraf dist && cpy '@fmal/http-service/dist/**/*' .. --cwd=../../node_modules --parents"
   },
   "devDependencies": {
     "@babel/cli": "7.6.4",
