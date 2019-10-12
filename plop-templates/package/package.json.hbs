@@ -32,7 +32,7 @@
     "build:cjs": "cross-env BABEL_ENV=cjs npm run _babel -- -d ../../node_modules/@fmal/{{kebabCase name}}/dist/cjs",
     "build:es": "cross-env BABEL_ENV=es npm run _babel -- -d ../../node_modules/@fmal/{{kebabCase name}}/dist/es",
     "build": "cross-env NODE_ENV=production run-p build:*",
-    "prepublishOnly": "rimraf dist && cpy '@fmal/{{kebabCase name}}/dist/**/*' .. --cwd=../../node_modules --parents"
+    "prepublishOnly": "rimraf dist && cpy \"@fmal/{{kebabCase name}}/dist/**/*\" .. --cwd=../../node_modules --parents"
   },
   "devDependencies": {
     "@babel/cli": "7.6.4",
