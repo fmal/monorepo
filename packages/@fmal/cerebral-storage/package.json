@@ -1,0 +1,64 @@
+{
+  "name": "@fmal/cerebral-storage",
+  "version": "0.0.0",
+  "description": "Storage provider for Cerebral",
+  "license": "UNLICENSED",
+  "keywords": [
+    "cerebral",
+    "cerebraljs",
+    "storage",
+    "localStorage"
+  ],
+  "author": "Christian Alfoni <christianalfoni@gmail.com>",
+  "contributors": [
+    "Filip Malinowski <filip@fmal.me>"
+  ],
+  "bugs": {
+    "url": "https://github.com/fmal/monorepo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmal/monorepo.git",
+    "directory": "packages/@fmal/cerebral-storage"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "dist/ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "files": [
+    "dist",
+    "src",
+    "/factories",
+    "!**/__tests__"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "typecheck": "tsc",
+    "lint": "eslint . --cache --fix --ext \".js,.ts\" --ignore-path ../../.prettierignore",
+    "clean": "rimraf dist coverage ../../node_modules/@fmal/cerebral-storage",
+    "_babel": "babel src -x \".js,.ts\" --root-mode upward",
+    "prebuild": "npm run clean",
+    "postbuild": "cpy package.json ../../node_modules/@fmal/cerebral-storage",
+    "build:types": "tsc -p tsconfig.gentypes.json",
+    "build:cjs": "cross-env BABEL_ENV=cjs npm run _babel -- -d ../../node_modules/@fmal/cerebral-storage/dist/cjs",
+    "build:es": "cross-env BABEL_ENV=es npm run _babel -- -d ../../node_modules/@fmal/cerebral-storage/dist/es",
+    "build": "cross-env NODE_ENV=production run-p build:*",
+    "prepublishOnly": "rimraf dist && cpy '@fmal/cerebral-storage/dist/**/*' .. --cwd=../../node_modules --parents"
+  },
+  "peerDependencies": {
+    "cerebral": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.6.4",
+    "cerebral": "5.2.0",
+    "cross-env": "6.0.3",
+    "eslint": "6.5.1",
+    "jest": "24.9.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.0",
+    "typescript": "3.6.4"
+  }
+}
