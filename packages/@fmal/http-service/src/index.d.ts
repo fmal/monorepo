@@ -76,7 +76,7 @@ export interface HttpService {
     url: string,
     body: any,
     options?: HttpRequestOptions
-  ): Promise<HttpRequestReponse<T>>;
+  ): Promise<HttpRequestResponse<T>>;
   patch<T>(
     url: string,
     body: any,
