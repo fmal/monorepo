@@ -52,7 +52,7 @@
     "cerebral": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.6.4",
+    "@babel/cli": "7.7.7",
     "cerebral": "5.2.0",
     "cross-env": "6.0.3",
     "eslint": "6.5.1",
