@@ -51,6 +51,9 @@
   "peerDependencies": {
     "cerebral": "^5.0.0"
   },
+  "dependencies": {
+    "@babel/runtime": "7.7.7"
+  },
   "devDependencies": {
     "@babel/cli": "7.7.7",
     "cerebral": "5.2.0",

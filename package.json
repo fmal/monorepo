@@ -66,7 +66,6 @@
     "@babel/plugin-transform-runtime": "7.7.6",
     "@babel/preset-env": "7.7.7",
     "@babel/preset-typescript": "7.6.0",
-    "@babel/runtime": "7.7.7",
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
     "@commitlint/prompt-cli": "8.2.0",
@@ -94,5 +93,8 @@
     "rimraf": "3.0.0",
     "typescript": "3.6.4",
     "xhr-mock": "2.5.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.7.7"
   }
 }

@@ -48,6 +48,9 @@
     "build": "cross-env NODE_ENV=production run-p build:*",
     "prepublishOnly": "rimraf dist && cpy \"@fmal/http-service/dist/**/*\" .. --cwd=../../node_modules --parents"
   },
+  "dependencies": {
+    "@babel/runtime": "7.7.7"
+  },
   "devDependencies": {
     "@babel/cli": "7.7.7",
     "cerebral": "5.2.0",
