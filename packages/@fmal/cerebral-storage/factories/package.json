@@ -2,6 +2,6 @@
   "name": "@fmal/cerebral-storage/factories",
   "private": true,
   "main": "../dist/cjs/factories/index.js",
-  "module": "../dist/esm/factories/index.js",
+  "module": "../dist/es/factories/index.js",
   "types": "../dist/ts/factories/index.d.ts"
 }
