@@ -49,7 +49,7 @@
     "prepublishOnly": "rimraf dist && cpy '@fmal/cerebral-storage/dist/**/*' .. --cwd=../../node_modules --parents"
   },
   "peerDependencies": {
-    "cerebral": "^5.0.0"
+    "cerebral": "^5.0.0 || ^5.2.2-0"
   },
   "dependencies": {
     "@babel/runtime": "7.7.7"
